@@ -1,0 +1,31 @@
+{
+  "scope": "Current paper analysis only; no later analysis environment snapshot was recovered.",
+  "original_files": {
+    "manifest.json": {
+      "size": 263288,
+      "sha256": "056d22675b3452fb04dde0a175d21adaab0a7f0f46ce479cf981cb709b6bd536"
+    },
+    "focused.complete.json": {
+      "size": 811,
+      "sha256": "19ce5db66e62aa8488c8bf19a6ab66bc3b4e6602074eb44b74fd9ecd210dfc62"
+    },
+    "results.csv": {
+      "size": 270675,
+      "sha256": "1b96b199927ef37e1b2dac5e2d645be91929f77621a9c7ddc9c98abd22c525f9"
+    },
+    "selected_specs.json": {
+      "size": 7704433,
+      "sha256": "4b961ac832d21f235282addebb03ee550f880fbaef7729fa149f4462a76701ca"
+    },
+    "calibration.csv": {
+      "size": 170141,
+      "sha256": "376f1620104ce4ebe6a1ac2bd2cffc09f12ac69f12fa74aede727b38bdb4ab81"
+    }
+  },
+  "byte_identical_distributed_files": [
+    "reference/raid/results.csv",
+    "reference/raid/selected_specs.json",
+    "reference/raid/calibration.csv"
+  ],
+  "manifest_representation": "reference/raid/manifest.json retains scientific configuration and folds, with identifying execution metadata removed."
+}

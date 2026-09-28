@@ -1,0 +1,74 @@
+{
+  "records": [
+    {
+      "file": "part-00001-of-00004.complete.json",
+      "original_file": {
+        "size": 4989,
+        "sha256": "24ea70a4dda873829aca77cecd23b72dee528ef44d2e31117de52a66fcb63fab"
+      },
+      "record": {
+        "score_rows": 42861,
+        "num_shards": 4,
+        "scorer_config": {
+          "dtype": "bf16",
+          "max_tokens": 512,
+          "observer_device": "cuda:0",
+          "observer_revision": "ec89142b67d748a1865ea4451372db8313ada0d8",
+          "performer_device": "cuda:1",
+          "performer_revision": "8782b5c5d8c9290412416618f36a133653e85285",
+          "performer_tokenizer_revision": "8782b5c5d8c9290412416618f36a133653e85285",
+          "tokenizer_revision": "ec89142b67d748a1865ea4451372db8313ada0d8",
+          "trust_remote_code": false
+        },
+        "implementation_version": "native-falcon-numerics-gate-v3"
+      }
+    },
+    {
+      "file": "part-00002-of-00004.complete.json",
+      "original_file": {
+        "size": 4989,
+        "sha256": "f03295c5b06fd0c7fa5e411a2aba57b0b380f3e8c6f0b28927b8a058a590ed49"
+      },
+      "record": {
+        "score_rows": 41899,
+        "num_shards": 4,
+        "scorer_config": {
+          "dtype": "bf16",
+          "max_tokens": 512,
+          "observer_device": "cuda:0",
+          "observer_revision": "ec89142b67d748a1865ea4451372db8313ada0d8",
+          "performer_device": "cuda:1",
+          "performer_revision": "8782b5c5d8c9290412416618f36a133653e85285",
+          "performer_tokenizer_revision": "8782b5c5d8c9290412416618f36a133653e85285",
+          "tokenizer_revision": "ec89142b67d748a1865ea4451372db8313ada0d8",
+          "trust_remote_code": false
+        },
+        "implementation_version": "native-falcon-numerics-gate-v3"
+      }
+    },
+    {
+      "file": "part-00003-of-00004.complete.json",
+      "original_file": {
+        "size": 4989,
+        "sha256": "e8942c7c5cc458d9cca40b8e01f49203a2cd9f86eacca1b934e8750f1e4648f6"
+      },
+      "record": {
+        "score_rows": 41548,
+        "num_shards": 4,
+        "scorer_config": {
+          "dtype": "bf16",
+          "max_tokens": 512,
+          "observer_device": "cuda:0",
+          "observer_revision": "ec89142b67d748a1865ea4451372db8313ada0d8",
+          "performer_device": "cuda:1",
+          "performer_revision": "8782b5c5d8c9290412416618f36a133653e85285",
+          "performer_tokenizer_revision": "8782b5c5d8c9290412416618f36a133653e85285",
+          "tokenizer_revision": "ec89142b67d748a1865ea4451372db8313ada0d8",
+          "trust_remote_code": false
+        },
+        "implementation_version": "native-falcon-numerics-gate-v3"
+      }
+    }
+  ],
+  "scope": "Only completion records present in the export. Score packs are not included."
+}

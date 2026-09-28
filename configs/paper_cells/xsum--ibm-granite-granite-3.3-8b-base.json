@@ -1,0 +1,137 @@
+{
+  "experiment_name": "robust-llm-detection-paper",
+  "datasets": {
+    "xsum": {
+      "config": null,
+      "id": "EdinburghNLP/xsum",
+      "id_fields": [
+        "id"
+      ],
+      "minimum_source_words": 260,
+      "pack_short_documents": false,
+      "revision": "7d4d486c2f8ef850b1a11aead99b894ff3dd7da9",
+      "split": "validation",
+      "text_fields": [
+        "document"
+      ]
+    }
+  },
+  "models": {
+    "primary": [
+      "ibm-granite/granite-3.3-8b-base"
+    ],
+    "replication": [],
+    "qwen_scaling": [],
+    "revision": "cfb7adb44a974653cbb2ff883653971c54dba578",
+    "tokenizer_revision": "cfb7adb44a974653cbb2ff883653971c54dba578",
+    "binoculars": {
+      "observer": "tiiuae/falcon-7b",
+      "observer_device": "cuda:1",
+      "observer_revision": "ec89142b67d748a1865ea4451372db8313ada0d8",
+      "performer": "tiiuae/falcon-7b-instruct",
+      "performer_device": "cuda:0",
+      "performer_revision": "8782b5c5d8c9290412416618f36a133653e85285"
+    }
+  },
+  "splits": {
+    "calibration": 500,
+    "clipping_tuning": 500,
+    "selection_seed": 1731,
+    "test": 2000
+  },
+  "generation": {
+    "backend": "transformers",
+    "batch_size": 8,
+    "checkpoint_examples": 96,
+    "continuation_tokens": 220,
+    "device": "cuda",
+    "device_map": "auto",
+    "dtype": "bf16",
+    "length_bucket_width": 32,
+    "max_new_tokens": 220,
+    "min_new_tokens": 210,
+    "prompt_tokens": 30,
+    "seeds": [
+      101,
+      202,
+      303
+    ],
+    "temperature": 0.8,
+    "tensor_parallel_size": 2,
+    "top_p": 0.95
+  },
+  "contamination": {
+    "corruption_seed": 99173,
+    "max_length_delta_tokens": 8,
+    "random_draws": 3,
+    "ratios": [
+      0.0,
+      0.05,
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5
+    ],
+    "tail_model_revision": null,
+    "max_constructed_length_delta_tokens": 8
+  },
+  "scoring": {
+    "batch_size": 4,
+    "detectors": [
+      "log_likelihood",
+      "rank",
+      "log_rank",
+      "lrr",
+      "entropy",
+      "entropy_gap",
+      "binoculars"
+    ],
+    "device": "cuda",
+    "device_map": "auto",
+    "dtype": "bf16",
+    "length_bucket_width": 32,
+    "max_tokens": 512,
+    "microbatch_size": 4,
+    "save_mean_pooled_final_hidden_state": true,
+    "saved_top_k": 10,
+    "vocab_chunk_size": 8192
+  },
+  "evaluation": {
+    "target_fprs": [
+      0.01,
+      0.05
+    ],
+    "partial_auroc_max_fpr": 0.05,
+    "tuning_mixture": {
+      "modes": [
+        "random",
+        "tail"
+      ],
+      "ratios": [
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5
+      ]
+    },
+    "oracle_mode_specific_clipping": false,
+    "bootstrap_repetitions": 2000,
+    "bootstrap_seed": 481516,
+    "clipping_quantiles": [
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      0.975,
+      0.99,
+      0.995
+    ]
+  },
+  "paths": {
+    "source_manifests": "runs/source_manifests",
+    "runs": "runs",
+    "results": "results"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "squad": {
+    "file": "source_manifests/squad-train-3000-seed1731-1078e801.jsonl",
+    "original_file": {
+      "size": 7921719,
+      "sha256": "8326fc87127fe1336eaf773e51f444c44bca477cba40233f3c9d66f4331fcc73"
+    },
+    "distributed_file": {
+      "size": 1977131,
+      "sha256": "d9dd2e665671d6431cbfb5a566ed9b144cc1aa426ca9d73e1e0cbee176e09815"
+    },
+    "sources": 3000,
+    "representation": "All original fields except source_text, replaced by its UTF-8 SHA256."
+  },
+  "writingprompts": {
+    "file": "source_manifests/writingprompts-validation-3000-seed1731-1cb7cee1.jsonl",
+    "original_file": {
+      "size": 11915050,
+      "sha256": "93cafa18eccf91ed6284f239e9aa6024305e6f6e1a224a133cffa56f8f7af1c1"
+    },
+    "distributed_file": {
+      "size": 1479842,
+      "sha256": "c3bdd6f9437c1f039078ff2a7511f2ce7465e43ebc320e291d9760b027a4571d"
+    },
+    "sources": 3000,
+    "representation": "All original fields except source_text, replaced by its UTF-8 SHA256."
+  },
+  "xsum": {
+    "file": "source_manifests/xsum-validation-3000-seed1731-61489a74.jsonl",
+    "original_file": {
+      "size": 10740688,
+      "sha256": "a2a6f126ee8e5fdac5a802e0e5b7220a7a99f40d05791803e8d0d56a45803e33"
+    },
+    "distributed_file": {
+      "size": 1503070,
+      "sha256": "0c40a43ba647088c0d34f5023fe3830977020fd41b405134541f1268847deedc"
+    },
+    "sources": 3000,
+    "representation": "All original fields except source_text, replaced by its UTF-8 SHA256."
+  }
+}

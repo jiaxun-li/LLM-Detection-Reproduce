@@ -1,0 +1,56 @@
+[
+  {
+    "dataset": "squad",
+    "model": "ibm-granite/granite-3.3-8b-base",
+    "config": "configs/paper_cells/squad--ibm-granite-granite-3.3-8b-base.json",
+    "provenance": "primary/squad--ibm-granite-granite-3.3-8b-base.json"
+  },
+  {
+    "dataset": "squad",
+    "model": "mistralai/Mistral-Small-24B-Base-2501",
+    "config": "configs/paper_cells/squad--mistralai-Mistral-Small-24B-Base-2501.json",
+    "provenance": "primary/squad--mistralai-Mistral-Small-24B-Base-2501.json"
+  },
+  {
+    "dataset": "squad",
+    "model": "Qwen/Qwen2.5-32B",
+    "config": "configs/paper_cells/squad--Qwen-Qwen2.5-32B.json",
+    "provenance": "primary/squad--Qwen-Qwen2.5-32B.json"
+  },
+  {
+    "dataset": "writingprompts",
+    "model": "ibm-granite/granite-3.3-8b-base",
+    "config": "configs/paper_cells/writingprompts--ibm-granite-granite-3.3-8b-base.json",
+    "provenance": "primary/writingprompts--ibm-granite-granite-3.3-8b-base.json"
+  },
+  {
+    "dataset": "writingprompts",
+    "model": "mistralai/Mistral-Small-24B-Base-2501",
+    "config": "configs/paper_cells/writingprompts--mistralai-Mistral-Small-24B-Base-2501.json",
+    "provenance": "primary/writingprompts--mistralai-Mistral-Small-24B-Base-2501.json"
+  },
+  {
+    "dataset": "writingprompts",
+    "model": "Qwen/Qwen2.5-32B",
+    "config": "configs/paper_cells/writingprompts--Qwen-Qwen2.5-32B.json",
+    "provenance": "primary/writingprompts--Qwen-Qwen2.5-32B.json"
+  },
+  {
+    "dataset": "xsum",
+    "model": "ibm-granite/granite-3.3-8b-base",
+    "config": "configs/paper_cells/xsum--ibm-granite-granite-3.3-8b-base.json",
+    "provenance": "primary/xsum--ibm-granite-granite-3.3-8b-base.json"
+  },
+  {
+    "dataset": "xsum",
+    "model": "mistralai/Mistral-Small-24B-Base-2501",
+    "config": "configs/paper_cells/xsum--mistralai-Mistral-Small-24B-Base-2501.json",
+    "provenance": "primary/xsum--mistralai-Mistral-Small-24B-Base-2501.json"
+  },
+  {
+    "dataset": "xsum",
+    "model": "Qwen/Qwen2.5-32B",
+    "config": "configs/paper_cells/xsum--Qwen-Qwen2.5-32B.json",
+    "provenance": "primary/xsum--Qwen-Qwen2.5-32B.json"
+  }
+]

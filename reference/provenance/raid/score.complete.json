@@ -1,0 +1,193 @@
+{
+  "original_file": {
+    "size": 8615,
+    "sha256": "e5626d6e7742bbaa0776ca326186487d21db8da98c6e805124d0bc1a730221ee"
+  },
+  "representation": "Recorded fields with private execution paths removed.",
+  "record": {
+    "binoculars_adjustments": {
+      "boundary_token_rows": 0,
+      "maximum_original_input_tokens": 19307,
+      "truncated_rows": 34388,
+      "truncated_tokens": 57163293
+    },
+    "binoculars_score_rows": 167323,
+    "binoculars_shards": [
+      {
+        "adjustments": {
+          "boundary_token_rows": 0,
+          "maximum_original_input_tokens": 19307,
+          "truncated_rows": 8340,
+          "truncated_tokens": 13868690
+        },
+        "num_shards": 4,
+        "resolved": {
+          "observer": "tiiuae/falcon-7b",
+          "observer_dtype": "bfloat16",
+          "observer_revision": "ec89142b67d748a1865ea4451372db8313ada0d8",
+          "observer_tokenizer_revision": "ec89142b67d748a1865ea4451372db8313ada0d8",
+          "performer": "tiiuae/falcon-7b-instruct",
+          "performer_dtype": "bfloat16",
+          "performer_revision": "8782b5c5d8c9290412416618f36a133653e85285",
+          "performer_tokenizer_revision": "8782b5c5d8c9290412416618f36a133653e85285"
+        },
+        "score_rows": 41015,
+        "scorer": "binoculars",
+        "shard_index": 0
+      },
+      {
+        "adjustments": {
+          "boundary_token_rows": 0,
+          "maximum_original_input_tokens": 18565,
+          "truncated_rows": 8826,
+          "truncated_tokens": 14635250
+        },
+        "num_shards": 4,
+        "resolved": {
+          "observer": "tiiuae/falcon-7b",
+          "observer_dtype": "bfloat16",
+          "observer_revision": "ec89142b67d748a1865ea4451372db8313ada0d8",
+          "observer_tokenizer_revision": "ec89142b67d748a1865ea4451372db8313ada0d8",
+          "performer": "tiiuae/falcon-7b-instruct",
+          "performer_dtype": "bfloat16",
+          "performer_revision": "8782b5c5d8c9290412416618f36a133653e85285",
+          "performer_tokenizer_revision": "8782b5c5d8c9290412416618f36a133653e85285"
+        },
+        "score_rows": 42861,
+        "scorer": "binoculars",
+        "shard_index": 1
+      },
+      {
+        "adjustments": {
+          "boundary_token_rows": 0,
+          "maximum_original_input_tokens": 9780,
+          "truncated_rows": 8691,
+          "truncated_tokens": 14283566
+        },
+        "num_shards": 4,
+        "resolved": {
+          "observer": "tiiuae/falcon-7b",
+          "observer_dtype": "bfloat16",
+          "observer_revision": "ec89142b67d748a1865ea4451372db8313ada0d8",
+          "observer_tokenizer_revision": "ec89142b67d748a1865ea4451372db8313ada0d8",
+          "performer": "tiiuae/falcon-7b-instruct",
+          "performer_dtype": "bfloat16",
+          "performer_revision": "8782b5c5d8c9290412416618f36a133653e85285",
+          "performer_tokenizer_revision": "8782b5c5d8c9290412416618f36a133653e85285"
+        },
+        "score_rows": 41899,
+        "scorer": "binoculars",
+        "shard_index": 2
+      },
+      {
+        "adjustments": {
+          "boundary_token_rows": 0,
+          "maximum_original_input_tokens": 11388,
+          "truncated_rows": 8531,
+          "truncated_tokens": 14375787
+        },
+        "num_shards": 4,
+        "resolved": {
+          "observer": "tiiuae/falcon-7b",
+          "observer_dtype": "bfloat16",
+          "observer_revision": "ec89142b67d748a1865ea4451372db8313ada0d8",
+          "observer_tokenizer_revision": "ec89142b67d748a1865ea4451372db8313ada0d8",
+          "performer": "tiiuae/falcon-7b-instruct",
+          "performer_dtype": "bfloat16",
+          "performer_revision": "8782b5c5d8c9290412416618f36a133653e85285",
+          "performer_tokenizer_revision": "8782b5c5d8c9290412416618f36a133653e85285"
+        },
+        "score_rows": 41548,
+        "scorer": "binoculars",
+        "shard_index": 3
+      }
+    ],
+    "data_rows": 167323,
+    "falcon_adjustments": {
+      "boundary_token_rows": 0,
+      "maximum_original_input_tokens": 19307,
+      "truncated_rows": 34388,
+      "truncated_tokens": 57163293
+    },
+    "falcon_score_rows": 167323,
+    "falcon_shards": [
+      {
+        "adjustments": {
+          "boundary_token_rows": 0,
+          "maximum_original_input_tokens": 19307,
+          "truncated_rows": 8340,
+          "truncated_tokens": 13868690
+        },
+        "num_shards": 4,
+        "resolved": {
+          "device": "cuda:0",
+          "dtype": "bfloat16",
+          "model": "tiiuae/falcon-7b",
+          "model_revision": "ec89142b67d748a1865ea4451372db8313ada0d8",
+          "tokenizer_revision": "ec89142b67d748a1865ea4451372db8313ada0d8"
+        },
+        "score_rows": 41015,
+        "scorer": "falcon",
+        "shard_index": 0
+      },
+      {
+        "adjustments": {
+          "boundary_token_rows": 0,
+          "maximum_original_input_tokens": 18565,
+          "truncated_rows": 8826,
+          "truncated_tokens": 14635250
+        },
+        "num_shards": 4,
+        "resolved": {
+          "device": "cuda:0",
+          "dtype": "bfloat16",
+          "model": "tiiuae/falcon-7b",
+          "model_revision": "ec89142b67d748a1865ea4451372db8313ada0d8",
+          "tokenizer_revision": "ec89142b67d748a1865ea4451372db8313ada0d8"
+        },
+        "score_rows": 42861,
+        "scorer": "falcon",
+        "shard_index": 1
+      },
+      {
+        "adjustments": {
+          "boundary_token_rows": 0,
+          "maximum_original_input_tokens": 9780,
+          "truncated_rows": 8691,
+          "truncated_tokens": 14283566
+        },
+        "num_shards": 4,
+        "resolved": {
+          "device": "cuda:0",
+          "dtype": "bfloat16",
+          "model": "tiiuae/falcon-7b",
+          "model_revision": "ec89142b67d748a1865ea4451372db8313ada0d8",
+          "tokenizer_revision": "ec89142b67d748a1865ea4451372db8313ada0d8"
+        },
+        "score_rows": 41899,
+        "scorer": "falcon",
+        "shard_index": 2
+      },
+      {
+        "adjustments": {
+          "boundary_token_rows": 0,
+          "maximum_original_input_tokens": 11388,
+          "truncated_rows": 8531,
+          "truncated_tokens": 14375787
+        },
+        "num_shards": 4,
+        "resolved": {
+          "device": "cuda:0",
+          "dtype": "bfloat16",
+          "model": "tiiuae/falcon-7b",
+          "model_revision": "ec89142b67d748a1865ea4451372db8313ada0d8",
+          "tokenizer_revision": "ec89142b67d748a1865ea4451372db8313ada0d8"
+        },
+        "score_rows": 41548,
+        "scorer": "falcon",
+        "shard_index": 3
+      }
+    ],
+    "num_score_shards": 4
+  }
+}

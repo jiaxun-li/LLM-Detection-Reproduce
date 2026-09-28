@@ -1,0 +1,104 @@
+{
+  "dataset": {
+    "expected_paper_sources": 14971,
+    "include_adversarial": true,
+    "loader": "raid_bench",
+    "local_path": null,
+    "recognized_full_source_counts": [
+      13371,
+      14971
+    ],
+    "required_attacks": [
+      "alternative_spelling",
+      "article_deletion",
+      "homoglyph",
+      "insert_paragraphs",
+      "number",
+      "paraphrase",
+      "perplexity_misspelling",
+      "synonym",
+      "upper_lower",
+      "whitespace",
+      "zero_width_space"
+    ],
+    "source_url": "https://dataset.raid-bench.xyz/train.csv",
+    "split": "train"
+  },
+  "dataset_file": {
+    "sha256": "52f04ceebc126064e68fbd22d8b736964065745464f4bfd52e488150b49f84e4",
+    "size_bytes": 11779491051
+  },
+  "selection": {
+    "required_development_source_exclusions": 500,
+    "selection_seed": 260823,
+    "split_fractions": {
+      "calibration": 0.2,
+      "clipping_tuning": 0.4,
+      "test": 0.4
+    },
+    "split_seed": 260824
+  },
+  "source_exclusions": {
+    "sha256": "02e46d83e47a1decfe6a268190042bc0e9c2ff5e530bf6633bb1f9337299dc08",
+    "size_bytes": 22172,
+    "source_count": 500
+  },
+  "exclusion_ids_included": true,
+  "falcon_resolved": {
+    "device": "cuda:0",
+    "dtype": "bfloat16",
+    "model": "tiiuae/falcon-7b",
+    "model_revision": "ec89142b67d748a1865ea4451372db8313ada0d8",
+    "tokenizer_revision": "ec89142b67d748a1865ea4451372db8313ada0d8"
+  },
+  "origin_scorer": {
+    "dtype": "bf16",
+    "max_tokens": 512,
+    "observer_device": "cuda:0",
+    "observer_revision": "ec89142b67d748a1865ea4451372db8313ada0d8",
+    "performer_device": "cuda:1",
+    "performer_revision": "8782b5c5d8c9290412416618f36a133653e85285",
+    "performer_tokenizer_revision": "8782b5c5d8c9290412416618f36a133653e85285",
+    "tokenizer_revision": "ec89142b67d748a1865ea4451372db8313ada0d8",
+    "trust_remote_code": false
+  },
+  "scoring": {
+    "batch_size": 8,
+    "context_policy": "raid_output_only_512",
+    "device": "cuda:0",
+    "dtype": "bf16",
+    "length_bucket_width": 64,
+    "max_tokens": 512,
+    "microbatch_size": 4,
+    "tokenizer_use_fast": true,
+    "truncation_side": "right",
+    "trust_remote_code": false,
+    "vocab_chunk_size": 8192
+  },
+  "software_versions": {
+    "accelerate": "1.14.0",
+    "datasets": "5.0.1",
+    "matplotlib": "3.11.1",
+    "numpy": "2.5.1",
+    "pandas": "3.0.5",
+    "python": "3.12.11",
+    "rapidfuzz": "3.14.5",
+    "torch": "2.11.0+cu128",
+    "transformers": "5.14.1",
+    "vllm": "not-installed"
+  },
+  "software_scope": "Recorded data/preparation and Falcon scoring environment; not a complete analysis-stage environment lock.",
+  "selected_sources": "reference/raid/selected_sources.csv",
+  "selected_machine_rows": "reference/raid/selected_machine_rows.csv",
+  "selection_evidence": "Original selected-source JSONL agrees with all distributed source and machine-row CSV identities; all 500 excluded IDs are disjoint.",
+  "exclusion_file": "reference/provenance/raid/excluded_sources.json",
+  "original_selected_sources": "reference/provenance/raid/selected_sources.jsonl",
+  "original_manifest": {
+    "size": 23930,
+    "sha256": "f341d049dacff9b92d6dc5992f4bb621a37721d07ce639c6f503733be2b08571"
+  },
+  "analysis_environment_snapshot": {
+    "available": false,
+    "scope": "No independent software snapshot is present for the later current analysis; scoring versions do not establish analysis versions."
+  }
+}

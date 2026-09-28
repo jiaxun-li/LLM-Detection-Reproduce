@@ -1,0 +1,158 @@
+{
+  "dataset": {
+    "config": null,
+    "id": "rajpurkar/squad",
+    "id_fields": [
+      "id"
+    ],
+    "minimum_source_words": 260,
+    "name": "squad",
+    "pack_short_documents": true,
+    "resolved_revision": "7b6d24c440a36b6815f21b70d25016731768db1f",
+    "revision": null,
+    "split": "train",
+    "text_fields": [
+      "context"
+    ]
+  },
+  "generation": {
+    "backend": "transformers",
+    "batch_size": 8,
+    "checkpoint_examples": 96,
+    "continuation_tokens": 220,
+    "device": "cuda",
+    "device_map": "auto",
+    "dtype": "bf16",
+    "length_bucket_width": 32,
+    "max_new_tokens": 220,
+    "min_new_tokens": 210,
+    "prompt_tokens": 30,
+    "seeds": [
+      101,
+      202,
+      303
+    ],
+    "temperature": 0.8,
+    "tensor_parallel_size": 4,
+    "top_p": 0.95
+  },
+  "contamination": {
+    "corruption_seed": 99173,
+    "max_length_delta_tokens": 12,
+    "random_draws": 3,
+    "ratios": [
+      0.0,
+      0.05,
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5
+    ],
+    "tail_model_revision": null
+  },
+  "scoring": {
+    "batch_size": 4,
+    "detectors": [
+      "log_likelihood",
+      "rank",
+      "log_rank",
+      "lrr",
+      "entropy",
+      "entropy_gap",
+      "binoculars"
+    ],
+    "device": "cuda",
+    "device_map": "auto",
+    "dtype": "bf16",
+    "length_bucket_width": 32,
+    "max_tokens": 512,
+    "microbatch_size": 4,
+    "save_mean_pooled_final_hidden_state": false,
+    "saved_top_k": 10,
+    "vocab_chunk_size": 8192
+  },
+  "split_sizes": {
+    "calibration": 500,
+    "clipping_tuning": 500,
+    "selection_seed": 1731,
+    "test": 2000
+  },
+  "random_seeds": {
+    "bootstrap": 481516,
+    "corruption": 99173,
+    "generation": [
+      101,
+      202,
+      303
+    ],
+    "source_selection": 1731
+  },
+  "target_model": "Qwen/Qwen2.5-32B",
+  "target_model_resolved_revision": "1818d35814b8319459f4bd55ed1ac8709630f003",
+  "target_tokenizer_resolved_revision": "1818d35814b8319459f4bd55ed1ac8709630f003",
+  "binoculars_models": {
+    "observer": "tiiuae/falcon-7b",
+    "observer_device": "cuda:1",
+    "observer_revision": null,
+    "performer": "tiiuae/falcon-7b-instruct",
+    "performer_device": "cuda:0",
+    "performer_revision": null
+  },
+  "binoculars_resolved_revisions": {
+    "observer": "ec89142b67d748a1865ea4451372db8313ada0d8",
+    "performer": "8782b5c5d8c9290412416618f36a133653e85285"
+  },
+  "software_versions": {
+    "accelerate": "1.14.0",
+    "datasets": "5.0.1",
+    "numpy": "2.5.1",
+    "pandas": "3.0.5",
+    "python": "3.12.11",
+    "torch": "2.11.0+cu128",
+    "transformers": "5.14.1",
+    "vllm": "not-installed"
+  },
+  "target_score_feature_schema": "target-token-features-v2",
+  "source_manifest_name": "squad-train-3000-seed1731-1078e801.jsonl",
+  "source_manifest_included": true,
+  "original_manifest": {
+    "size": 5873,
+    "sha256": "31e44276882a159e8368f912464a2fa5d47f1898878f1e794518df8987181c84"
+  },
+  "source_manifest_representation": "Identity and text-hash derivative; restore-sources reconstructs and verifies original bytes.",
+  "source_manifest": "reference/provenance/source_manifests/squad-train-3000-seed1731-1078e801.jsonl",
+  "original_source_manifest": {
+    "size": 7921719,
+    "sha256": "8326fc87127fe1336eaf773e51f444c44bca477cba40233f3c9d66f4331fcc73"
+  },
+  "completion_records": {
+    "prepare.complete.json": {
+      "original_file": {
+        "size": 125,
+        "sha256": "32c1aa0e081dc683ff9c5f2cc4fa8ec38b11e995047a97e27841e3fe7b4017e9"
+      },
+      "record": {
+        "status": "complete",
+        "validation": {
+          "base_rows": 3000,
+          "data_rows": 78000,
+          "tail_cache_rows": 3000
+        }
+      }
+    },
+    "score.complete.json": {
+      "original_file": {
+        "size": 117,
+        "sha256": "4f1553b69a57706d306f0f781e1674f3e366e5dc198f8e1ba54313b5f2434bc4"
+      },
+      "record": {
+        "status": "complete",
+        "validation": {
+          "binoculars_score_rows": 78000,
+          "target_score_rows": 78000
+        }
+      }
+    }
+  }
+}

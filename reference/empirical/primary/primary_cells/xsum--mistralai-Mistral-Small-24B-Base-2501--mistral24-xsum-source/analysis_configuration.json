@@ -1,0 +1,114 @@
+{
+  "contamination": {
+    "corruption_seed": 99173,
+    "max_length_delta_tokens": 12,
+    "random_draws": 3,
+    "ratios": [
+      0.0,
+      0.05,
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5
+    ],
+    "tail_model_revision": null
+  },
+  "dataset": "xsum",
+  "datasets": {
+    "xsum": {
+      "config": null,
+      "id": "EdinburghNLP/xsum",
+      "id_fields": [
+        "id"
+      ],
+      "minimum_source_words": 260,
+      "name": "xsum",
+      "pack_short_documents": false,
+      "resolved_revision": "7d4d486c2f8ef850b1a11aead99b894ff3dd7da9",
+      "revision": null,
+      "split": "validation",
+      "text_fields": [
+        "document"
+      ]
+    }
+  },
+  "evaluation": {
+    "bootstrap_repetitions": 2000,
+    "bootstrap_seed": 481516,
+    "clipping_quantiles": [
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      0.975,
+      0.99,
+      0.995
+    ],
+    "detector_revision": "binocular-origin-lrr-constant-v1",
+    "oracle_mode_specific_clipping": false,
+    "partial_auroc_max_fpr": 0.05,
+    "target_fprs": [
+      0.01,
+      0.05
+    ],
+    "tuning_mixture": {
+      "modes": [
+        "random",
+        "tail"
+      ],
+      "ratios": [
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5
+      ]
+    }
+  },
+  "generation": {
+    "backend": "transformers",
+    "batch_size": 8,
+    "checkpoint_examples": 96,
+    "continuation_tokens": 220,
+    "device": "cuda",
+    "device_map": "auto",
+    "dtype": "bf16",
+    "length_bucket_width": 32,
+    "max_new_tokens": 220,
+    "min_new_tokens": 210,
+    "prompt_tokens": 30,
+    "seeds": [
+      101,
+      202,
+      303
+    ],
+    "temperature": 0.8,
+    "tensor_parallel_size": 4,
+    "top_p": 0.95
+  },
+  "run_id": "mistral24-xsum-analysis",
+  "scoring": {
+    "batch_size": 4,
+    "detectors": [
+      "log_likelihood",
+      "rank",
+      "log_rank",
+      "lrr",
+      "entropy",
+      "entropy_gap",
+      "binocular_gap",
+      "binocular_origin"
+    ],
+    "device": "cuda",
+    "device_map": "auto",
+    "dtype": "bf16",
+    "length_bucket_width": 32,
+    "max_tokens": 512,
+    "microbatch_size": 4,
+    "save_mean_pooled_final_hidden_state": false,
+    "saved_top_k": 10,
+    "vocab_chunk_size": 8192
+  },
+  "target_model": "mistralai/Mistral-Small-24B-Base-2501"
+}

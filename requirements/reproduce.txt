@@ -1,0 +1,6 @@
+# CPU figures and tables from saved numerical results. Python >=3.11.
+# Validated locally with NumPy 2.3.5, ReportLab 4.5.1, Matplotlib 3.11.2.
+numpy==2.3.5
+reportlab>=4.0,<5
+matplotlib>=3.8,<4
+# Optional PNG previews require the system Poppler command pdftoppm.

@@ -1,0 +1,162 @@
+{
+  "dataset": {
+    "config": null,
+    "id": "euclaise/writingprompts",
+    "id_fields": [
+      "id",
+      "prompt_id"
+    ],
+    "minimum_source_words": 260,
+    "name": "writingprompts",
+    "pack_short_documents": false,
+    "resolved_revision": "35f0aa359452ba8147b34d925684fccee26679cc",
+    "revision": null,
+    "split": "validation",
+    "text_fields": [
+      "story",
+      "text",
+      "completion"
+    ]
+  },
+  "generation": {
+    "backend": "transformers",
+    "batch_size": 8,
+    "checkpoint_examples": 96,
+    "continuation_tokens": 220,
+    "device": "cuda",
+    "device_map": "auto",
+    "dtype": "bf16",
+    "length_bucket_width": 32,
+    "max_new_tokens": 220,
+    "min_new_tokens": 210,
+    "prompt_tokens": 30,
+    "seeds": [
+      101,
+      202,
+      303
+    ],
+    "temperature": 0.8,
+    "tensor_parallel_size": 4,
+    "top_p": 0.95
+  },
+  "contamination": {
+    "corruption_seed": 99173,
+    "max_constructed_length_delta_tokens": 20,
+    "max_length_delta_tokens": 12,
+    "random_draws": 3,
+    "ratios": [
+      0.0,
+      0.05,
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5
+    ],
+    "tail_model_revision": null
+  },
+  "scoring": {
+    "batch_size": 4,
+    "detectors": [
+      "log_likelihood",
+      "rank",
+      "log_rank",
+      "lrr",
+      "entropy",
+      "entropy_gap",
+      "binoculars"
+    ],
+    "device": "cuda",
+    "device_map": "auto",
+    "dtype": "bf16",
+    "length_bucket_width": 32,
+    "max_tokens": 512,
+    "microbatch_size": 4,
+    "save_mean_pooled_final_hidden_state": false,
+    "saved_top_k": 10,
+    "vocab_chunk_size": 8192
+  },
+  "split_sizes": {
+    "calibration": 500,
+    "clipping_tuning": 500,
+    "selection_seed": 1731,
+    "test": 2000
+  },
+  "random_seeds": {
+    "bootstrap": 481516,
+    "corruption": 99173,
+    "generation": [
+      101,
+      202,
+      303
+    ],
+    "source_selection": 1731
+  },
+  "target_model": "Qwen/Qwen2.5-32B",
+  "target_model_resolved_revision": "1818d35814b8319459f4bd55ed1ac8709630f003",
+  "target_tokenizer_resolved_revision": "1818d35814b8319459f4bd55ed1ac8709630f003",
+  "binoculars_models": {
+    "observer": "tiiuae/falcon-7b",
+    "observer_device": "cuda:1",
+    "observer_revision": null,
+    "performer": "tiiuae/falcon-7b-instruct",
+    "performer_device": "cuda:0",
+    "performer_revision": null
+  },
+  "binoculars_resolved_revisions": {
+    "observer": "ec89142b67d748a1865ea4451372db8313ada0d8",
+    "performer": "8782b5c5d8c9290412416618f36a133653e85285"
+  },
+  "software_versions": {
+    "accelerate": "1.14.0",
+    "datasets": "5.0.1",
+    "numpy": "2.5.1",
+    "pandas": "3.0.5",
+    "python": "3.12.11",
+    "torch": "2.11.0+cu128",
+    "transformers": "5.14.1",
+    "vllm": "not-installed"
+  },
+  "target_score_feature_schema": "target-token-features-v2",
+  "source_manifest_name": "writingprompts-validation-3000-seed1731-1cb7cee1.jsonl",
+  "source_manifest_included": true,
+  "original_manifest": {
+    "size": 6086,
+    "sha256": "078512801b9bb5ac62e577ecb04014bf4b1a0fbb13cecc19cddeca10b2df340f"
+  },
+  "source_manifest_representation": "Identity and text-hash derivative; restore-sources reconstructs and verifies original bytes.",
+  "source_manifest": "reference/provenance/source_manifests/writingprompts-validation-3000-seed1731-1cb7cee1.jsonl",
+  "original_source_manifest": {
+    "size": 11915050,
+    "sha256": "93cafa18eccf91ed6284f239e9aa6024305e6f6e1a224a133cffa56f8f7af1c1"
+  },
+  "completion_records": {
+    "prepare.complete.json": {
+      "original_file": {
+        "size": 125,
+        "sha256": "32c1aa0e081dc683ff9c5f2cc4fa8ec38b11e995047a97e27841e3fe7b4017e9"
+      },
+      "record": {
+        "status": "complete",
+        "validation": {
+          "base_rows": 3000,
+          "data_rows": 78000,
+          "tail_cache_rows": 3000
+        }
+      }
+    },
+    "score.complete.json": {
+      "original_file": {
+        "size": 117,
+        "sha256": "4f1553b69a57706d306f0f781e1674f3e366e5dc198f8e1ba54313b5f2434bc4"
+      },
+      "record": {
+        "status": "complete",
+        "validation": {
+          "binoculars_score_rows": 78000,
+          "target_score_rows": 78000
+        }
+      }
+    }
+  }
+}

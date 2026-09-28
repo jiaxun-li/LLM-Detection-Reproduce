@@ -1,0 +1,106 @@
+{
+  "status": "complete",
+  "availability": "See availability.json; inventory completeness is not experiment replay completeness.",
+  "artifacts": {
+    "analysis_evidence.json": {
+      "size": 1152,
+      "sha256": "81b5ec9128bf8092e3106bdbae399be0a1d6966569c5d337d0c9bc31e066ba0e"
+    },
+    "availability.json": {
+      "size": 1089,
+      "sha256": "ea69bd8f1d09e689ee7e91a7a3dacca207bf3b9c1389a2235e02e2c07fd0d51c"
+    },
+    "primary/squad--ibm-granite-granite-3.3-8b-base.json": {
+      "size": 4193,
+      "sha256": "d84d8162925c32e501611bcd183674ab3e2c4f8cdacd223b16ec8dbadcd696eb"
+    },
+    "primary/squad--mistralai-Mistral-Small-24B-Base-2501.json": {
+      "size": 4201,
+      "sha256": "31e730748d2013d6cbf2f6c59f6b80f38668ba437fc198c3974744828c9b1b5e"
+    },
+    "primary/squad--Qwen-Qwen2.5-32B.json": {
+      "size": 4180,
+      "sha256": "2311377ceed698d32ce1c84edb2f30cb8c0faad40ff301e2eeb39bede7cbdb7e"
+    },
+    "primary/writingprompts--ibm-granite-granite-3.3-8b-base.json": {
+      "size": 4299,
+      "sha256": "5e08b144f9a9462e5127ba7f79af5f04c349c60733a0038528e2bb284feaacf0"
+    },
+    "primary/writingprompts--mistralai-Mistral-Small-24B-Base-2501.json": {
+      "size": 4307,
+      "sha256": "741344bd348c89bf9e73f1b697b5aa11713f21297144f2bdeb1f4c302b734e88"
+    },
+    "primary/writingprompts--Qwen-Qwen2.5-32B.json": {
+      "size": 4334,
+      "sha256": "4973e4549b9ea4827f36d66092ab428dbcc4e355c3beefbc8501aec77f7bc9e5"
+    },
+    "primary/xsum--ibm-granite-granite-3.3-8b-base.json": {
+      "size": 4210,
+      "sha256": "57e44961151274d683ab982a49b3909a9d160388a06986558760ad3009c5d3d5"
+    },
+    "primary/xsum--mistralai-Mistral-Small-24B-Base-2501.json": {
+      "size": 4218,
+      "sha256": "69414cf01ceb29a30b53c75e4b322b61ac0307495634027717466d6a306185fa"
+    },
+    "primary/xsum--Qwen-Qwen2.5-32B.json": {
+      "size": 4197,
+      "sha256": "76f43177cd0169b6017dc684497761d414da07c5584872f16b9d133e198620b3"
+    },
+    "primary_cells.json": {
+      "size": 2156,
+      "sha256": "756546991966fe197684e99b82e087b30ded1514b0ca00719c03284d178ff8ac"
+    },
+    "raid/components-gate.json": {
+      "size": 1923,
+      "sha256": "e934455c6eef1d25c589ac570e6d1cd86a64d0cc063d6fe72d7d6021dacc1dbf"
+    },
+    "raid/components-shards.json": {
+      "size": 2812,
+      "sha256": "7d374ef5465fe362c6b79e8d13c44493c9dfcdac7445f0cab65d23e1bc1ba1b1"
+    },
+    "raid/excluded_sources.json": {
+      "size": 22172,
+      "sha256": "02e46d83e47a1decfe6a268190042bc0e9c2ff5e530bf6633bb1f9337299dc08"
+    },
+    "raid/origin-gate.json": {
+      "size": 1930,
+      "sha256": "ec56f67b19c6ad64ef2712f0c5354fe377d1a22f9a78bbf1ee6af6941037b3b8"
+    },
+    "raid/origin-shards.json": {
+      "size": 4970,
+      "sha256": "df21cbd99279e6a124fddc1da6ad708f2c1f409e0fa139567af5bf0f1c416d57"
+    },
+    "raid/prepare.complete.json": {
+      "size": 2194,
+      "sha256": "1d4566cd4381cd1d01ac8a0bf631f252b1576c8372b604c8431a15b436a10700"
+    },
+    "raid/score.complete.json": {
+      "size": 6764,
+      "sha256": "b6a73befe35c44990f27877ee1f96f8460746d6cba7d6527bd3d8a56a793080d"
+    },
+    "raid/selected_sources.jsonl": {
+      "size": 13644836,
+      "sha256": "194293af3b345e69a5fde2addf51dbdbfc6da91b495e29c776621315381dab67"
+    },
+    "raid.json": {
+      "size": 3504,
+      "sha256": "4ceaf53b4d99c615f537570988fac38a356cc8583f6b48dc54603bdff5a7e0f5"
+    },
+    "source_manifests/squad-train-3000-seed1731-1078e801.jsonl": {
+      "size": 1977131,
+      "sha256": "d9dd2e665671d6431cbfb5a566ed9b144cc1aa426ca9d73e1e0cbee176e09815"
+    },
+    "source_manifests/writingprompts-validation-3000-seed1731-1cb7cee1.jsonl": {
+      "size": 1479842,
+      "sha256": "c3bdd6f9437c1f039078ff2a7511f2ce7465e43ebc320e291d9760b027a4571d"
+    },
+    "source_manifests/xsum-validation-3000-seed1731-61489a74.jsonl": {
+      "size": 1503070,
+      "sha256": "0c40a43ba647088c0d34f5023fe3830977020fd41b405134541f1268847deedc"
+    },
+    "source_manifests.json": {
+      "size": 1515,
+      "sha256": "03eb8fbec5dc9fd3f44a618186645970911f69cc8769be5600a400b15b23926e"
+    }
+  }
+}

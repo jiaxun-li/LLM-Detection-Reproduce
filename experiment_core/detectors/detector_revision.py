@@ -1,0 +1,166 @@
+"""Explicit, opt-in detector amendment; historical score files remain immutable."""
+from __future__ import annotations
+
+import numpy as np
+
+REVISION = "binocular-origin-lrr-constant-v1"
+IMPLEMENTATION_VERSION = "official-score-anchored-clipping-v4.2"
+PAIR_METHODS = ("binoculars", "binocular_gap", "binocular_origin")
+ORIGIN_NLL = "binocular_origin_nll"
+ORIGIN_DENOMINATOR = "binocular_origin_denominator"
+ORIGIN_NUMERATOR = "binocular_origin_numerator"
+
+
+def valid_lrr_clipping_spec(spec):
+    """A clipped LRR denominator cap must retain positive rank evidence.
+
+    Token ranks start at one, so log-ranks are nonnegative.  A cap at zero
+    therefore maps every denominator contribution to zero and turns LRR into
+    a scaled numerator-only detector.
+    """
+    if not spec:
+        return True
+    try:
+        bound = float(spec["log_rank_upper"])
+    except (KeyError, TypeError, ValueError):
+        return False
+    return bool(np.isfinite(bound) and bound > 0.0)
+
+
+def require_valid_lrr_clipping_spec(spec):
+    """Fail loudly if a supplied LRR clipping rule collapses its denominator."""
+    if not valid_lrr_clipping_spec(spec):
+        raise ValueError("LRR clipping requires a positive log-rank upper bound")
+
+
+def round_bfloat16(values):
+    """Round finite float32 values to BF16, nearest with ties to even."""
+    values = np.asarray(values, dtype=np.float32)
+    if not np.isfinite(values).all():
+        raise ValueError("nonfinite BF16 input")
+    bits = values.view(np.uint32)
+    rounded = (bits + np.uint32(0x7fff) + ((bits >> 16) & 1)) & np.uint32(0xffff0000)
+    return rounded.view(np.float32)
+
+
+def official_nll_mean(values, upper=None):
+    """Replay CUDA BF16 tensor division, NOT CPU/scalar division.
+
+    Saved NLL is already BF16. Round the optional capped values back to that
+    dtype before reduction. This helper captures tested CUDA cases but is not
+    used to reconstruct production raw numerators: serialized values do not
+    preserve CUDA's parallel summation order. Production clipping uses
+    ``anchored_nll_mean`` below.
+    CUDA converts the integer mask-count tensor to BF16 for this operation.
+    Odd counts above 256 can round (257 -> 256, 259 -> 260). A Python scalar
+    divisor follows a different kernel path and must not be used as reference.
+    """
+    values = np.asarray(values, dtype=float)
+    if values.ndim != 1 or not len(values) or (values < 0).any():
+        raise ValueError("invalid official numerator values")
+    if upper is not None:
+        if not np.isfinite(upper) or upper < 0:
+            raise ValueError("invalid NLL cap")
+        values = np.minimum(values, upper)
+    values = round_bfloat16(values)
+    total = round_bfloat16(values.sum(dtype=np.float64))
+    divisor = round_bfloat16(len(values))
+    return float(round_bfloat16(np.float32(total) / np.float32(divisor)))
+
+
+def anchored_nll_mean(values, official_numerator, upper):
+    """Apply a deterministic clipping delta to an official CUDA numerator.
+
+    The serialized BF16 losses do not encode CUDA's parallel reduction order,
+    so they cannot always reconstruct the official numerator bit-for-bit.  Use
+    them only to calculate the float64 clipping delta and anchor that delta to
+    the stored official value.
+    """
+    values = np.asarray(values, dtype=float)
+    official_numerator = float(official_numerator)
+    upper = float(upper)
+    if (values.ndim != 1 or not len(values) or not np.isfinite(values).all()
+            or (values < 0).any() or not np.isfinite(official_numerator)
+            or official_numerator < 0 or not np.isfinite(upper) or upper < 0):
+        raise ValueError("invalid anchored numerator inputs")
+    delta = float(np.minimum(values, upper).mean(dtype=np.float64)
+                  - values.mean(dtype=np.float64))
+    # Clipping cannot increase an NLL numerator.  The lower guard only protects
+    # the ratio from a tiny negative value caused by anchoring rounded raw data.
+    return min(official_numerator, max(0.0, official_numerator + delta))
+
+
+def structurally_constant_candidate(rows, detector, direction, spec):
+    """Exact full saturation, BEFORE length-dependent floating-point means.
+
+    No tolerance and no new tuning parameter. Origin is excluded: even a
+    constant numerator can retain real information through its denominator.
+    """
+    if not spec or detector == "binocular_origin":
+        return False
+    for row in rows:
+        f = row["token_features"]
+        if detector == "lrr":
+            if not (np.all(-np.asarray(f["logp"]) >= spec["nll_upper"])
+                    and np.all(np.asarray(f["log_rank"]) >= spec["log_rank_upper"])):
+                return False
+        else:
+            if detector in {"binoculars", "binocular_gap"}:
+                values = np.asarray(f["performer_nll"]) - np.asarray(f["observer_to_performer_cross_entropy"])
+            elif detector == "entropy_gap":
+                values = -np.asarray(f["logp"]) - np.asarray(f["entropy"])
+            else:
+                values = np.asarray(f[{"log_likelihood":"logp", "rank":"rank",
+                                       "log_rank":"log_rank", "entropy":"entropy"}[detector]])
+            if not np.all(direction * values <= spec["lower"]):
+                return False
+    return bool(rows)
+
+
+def origin_components(row):
+    """RAID uses namespaced official features; primary uses its saved window."""
+    features = row["token_features"]
+    if ORIGIN_NLL in features:
+        nll = np.asarray(features[ORIGIN_NLL], dtype=float)
+        denominator = float(row["doc_scores"][ORIGIN_DENOMINATOR])
+    else:
+        nll = np.asarray(features["performer_nll"], dtype=float)
+        ce = np.asarray(features["observer_to_performer_cross_entropy"], dtype=float)
+        if len(nll) != len(ce):
+            raise ValueError("conditional Binoculars requires matching saved windows")
+        denominator = float(ce.mean())
+    if nll.ndim != 1 or not len(nll) or not np.isfinite(nll).all():
+        raise ValueError("invalid Binoculars numerator")
+    if not np.isfinite(denominator) or denominator <= 0:
+        raise ValueError("invalid Binoculars denominator")
+    return nll, denominator
+
+
+def origin_score(row, spec=None):
+    nll, denominator = origin_components(row)
+    if spec:
+        if not np.any(nll > spec["nll_upper"]):
+            # Do not manufacture a change solely by re-rounding an unaffected
+            # official BF16 score in the float64 analysis code.
+            return origin_score(row)
+        if ORIGIN_NLL in row["token_features"]:
+            numerator = anchored_nll_mean(
+                nll, row["doc_scores"][ORIGIN_NUMERATOR],
+                spec["nll_upper"])
+            return float(np.float32(numerator) / np.float32(denominator))
+        return float(np.minimum(nll, spec["nll_upper"]).mean() / denominator)
+    # Preserve upstream dtype/reduction exactly for official RAID raw scores.
+    if "binocular_origin" in row.get("doc_scores", {}):
+        value = float(row["doc_scores"]["binocular_origin"])
+        if not np.isfinite(value):
+            raise ValueError("nonfinite official Binoculars score")
+        return value
+    return float(nll.mean() / denominator)
+
+
+def constant_clean_scores(human, machine):
+    """Exact degeneracy only: no tolerance, no test/calibration observations."""
+    values = np.asarray(list(human) + list(machine), dtype=float)
+    if not len(values) or not np.isfinite(values).all():
+        raise ValueError("clean tuning scores must be nonempty and finite")
+    return bool(np.all(values == values[0]))

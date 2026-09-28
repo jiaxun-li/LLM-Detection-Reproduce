@@ -1,0 +1,47 @@
+{
+  "original_file": {
+    "size": 6406,
+    "sha256": "eb68c999d9adc493f5e2c5389a236790b0fc3327b47d34e3c2519e7f2323f536"
+  },
+  "representation": "Scoring parity fields only; private paths and analysis-probe outputs omitted.",
+  "record": {
+    "status": "pass",
+    "implementation_version": "official-score-anchored-clipping-v4.1",
+    "parity_checks": 314,
+    "parity_scope": "same_logits_upstream_mean_components",
+    "reference_sha256": "863876e772893f03a3d2a6b82c4589123751c7b77f2499c2a8cd92159a2d7061",
+    "scorer_config": {
+      "dtype": "bf16",
+      "max_tokens": 512,
+      "observer_device": "cuda:0",
+      "observer_revision": "ec89142b67d748a1865ea4451372db8313ada0d8",
+      "performer_device": "cuda:1",
+      "performer_revision": "8782b5c5d8c9290412416618f36a133653e85285",
+      "performer_tokenizer_revision": "8782b5c5d8c9290412416618f36a133653e85285",
+      "tokenizer_revision": "ec89142b67d748a1865ea4451372db8313ada0d8",
+      "trust_remote_code": false
+    },
+    "num_shards": 4,
+    "source_exclusions": {
+      "sha256": "02e46d83e47a1decfe6a268190042bc0e9c2ff5e530bf6633bb1f9337299dc08",
+      "size_bytes": 22172,
+      "source_count": 500
+    },
+    "tokenizer_preflight": {
+      "probe_rows": 312,
+      "probe_sources": 24,
+      "rows": 167323,
+      "shard_content_verified": true,
+      "sources": 12871,
+      "status": "pass",
+      "unscorable_examples": [],
+      "unscorable_rows": 0
+    },
+    "implementation_sha256": {
+      "RAID/binocular_origin.py": "6759878bf95e81a8d51104942249bad00803d17679c90232e8617a2065b9706f",
+      "RAID/raid_scoring.py": "921beecac0ad4cc54379363e43d2f70b5d0b11a80561a2ecab328e37f113f715",
+      "RAID/revision_gate.py": "cc01c2f36ff0dd14c05e88ecfe806e79326756290f91e93b39167136d6e0f6c7",
+      "llm_detection/scoring.py": "f603fff31e08bc7ad3ad7fc1f5e0b58a5f7d3303fd93f959e741fe7907d123c8"
+    }
+  }
+}

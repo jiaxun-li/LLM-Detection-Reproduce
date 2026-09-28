@@ -1,0 +1,29 @@
+# Generated outputs and local experiment runs.
+/outputs/
+/runs/
+/results/
+/logs/
+
+# Local environments and caches.
+.venv*/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+.DS_Store
+Thumbs.db
+
+# Local credentials and environment settings.
+.env
+.env.*
+!.env.example
+
+# Private manuscript materials, downloads, and local tooling.
+/paper/
+/downloads/
+/archive/
+/.agents/
+/.codex/

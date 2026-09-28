@@ -1,0 +1,48 @@
+{
+  "status": "complete",
+  "protocol": "raid-focused-crossfit-tpr-four-scope-v2",
+  "specifications": 119,
+  "result_rows": 462,
+  "bootstrap_repetitions": 2000,
+  "sources": 12871,
+  "split_sources": {
+    "clipping_tuning": 5148,
+    "test": 5149,
+    "calibration": 2574
+  },
+  "artifacts": {
+    "binoculars_sanity.csv": {
+      "size": 1032,
+      "sha256": "9533ecf4529d7a770eda5591e043caf70e30f0b414b158201e91cb4330a09b55"
+    },
+    "calibration.csv": {
+      "size": 170141,
+      "sha256": "376f1620104ce4ebe6a1ac2bd2cffc09f12ac69f12fa74aede727b38bdb4ab81"
+    },
+    "contamination_records.csv": {
+      "size": 49617610,
+      "sha256": "a0cca262cc84240328eb589a5c9feff8d1853d7af8c4093764ab7ff89a909e9e"
+    },
+    "manifest.json": {
+      "size": 266336,
+      "sha256": "fa6443d0ab99a7b82f8cafd27c29bf769f404e6c2c59407ccd31a850c9f7fdf8"
+    },
+    "results.csv": {
+      "size": 270675,
+      "sha256": "1b96b199927ef37e1b2dac5e2d645be91929f77621a9c7ddc9c98abd22c525f9"
+    },
+    "selected_machine_rows.csv": {
+      "size": 25091729,
+      "sha256": "668c3f5b7f31c53c52c56f5083c42fa85be4ecfc18482e37e517381b2186a7bf"
+    },
+    "selected_sources.csv": {
+      "size": 1443222,
+      "sha256": "6317c38e643496b311d693331dddc25cf6f7c22a02c18a000036c65502dd862d"
+    },
+    "selected_specs.json": {
+      "size": 7704433,
+      "sha256": "4b961ac832d21f235282addebb03ee550f880fbaef7729fa149f4462a76701ca"
+    }
+  },
+  "note": "Distribution inventory. Results, specifications, calibration, rates and baseline audit are copied without numerical changes."
+}

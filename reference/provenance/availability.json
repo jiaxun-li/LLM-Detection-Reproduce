@@ -1,0 +1,21 @@
+{
+  "status": "source_provenance_recovered",
+  "included": [
+    "Original 500-source RAID exclusion JSON",
+    "Original 12871-source RAID selection JSONL",
+    "Three 3000-source controlled manifests as identity/text-hash derivatives with exact restoration support",
+    "Nine primary run records and preparation/scoring completion evidence",
+    "Both RAID scoring gates, available shard records and preparation/scoring completion evidence",
+    "Current RAID analysis configuration and original result-file hashes"
+  ],
+  "pending_server_export": [],
+  "not_included": [
+    "Large token-score packs and prepared/generated text",
+    "Upstream Binoculars metrics.py (its recorded SHA256 is included)"
+  ],
+  "analysis_environment_snapshot": {
+    "available": false,
+    "note": "Original scoring software versions are recorded separately; they are not independently verified later analysis versions."
+  },
+  "score_level_replay": "No score-level replay was performed. Table regeneration does not refit clipping or independently recompute confidence intervals."
+}

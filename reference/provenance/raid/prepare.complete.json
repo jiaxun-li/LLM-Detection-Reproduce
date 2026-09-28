@@ -1,0 +1,83 @@
+{
+  "original_file": {
+    "size": 2451,
+    "sha256": "4be5d7898022e24fdc5a388e598708a0507bc39e74a8a1f54244720d5340596b"
+  },
+  "representation": "Recorded fields with private execution paths removed.",
+  "record": {
+    "applied_development_source_exclusions": 500,
+    "available_complete_sources": 12871,
+    "excluded_sources": 500,
+    "expected_paper_sources": 14971,
+    "incomplete_families": 0,
+    "index_cache": {
+      "duplicate_rows": 0,
+      "indexed_rows": 5615820,
+      "indexed_sources": 13371,
+      "input_rows": 5615820,
+      "inserted_rows": 5615820,
+      "mode": "cache_built",
+      "validation_mode": "exhaustive_counts"
+    },
+    "index_reused": true,
+    "indexed_rows": 5615820,
+    "indexed_sources": 13371,
+    "missing_development_source_exclusions": [],
+    "prepared_rows": 167323,
+    "requested_development_source_exclusions": 500,
+    "rows_per_source": 13,
+    "sample_scope": "complete_available_labeled_release",
+    "score_shards": {
+      "assignment": "stable_int('raid-score-shard-v1', source_id) % num_shards",
+      "num_shards": 4,
+      "rows_per_shard": [
+        41015,
+        42861,
+        41899,
+        41548
+      ],
+      "sources_per_shard": [
+        3155,
+        3297,
+        3223,
+        3196
+      ]
+    },
+    "selected_sources": 12871,
+    "selection_scan_complete": true,
+    "selection_scanned_sources": 13371,
+    "split_domain_counts": {
+      "calibration": {
+        "abstracts": 341,
+        "books": 344,
+        "news": 343,
+        "poetry": 342,
+        "recipes": 342,
+        "reddit": 343,
+        "reviews": 176,
+        "wiki": 343
+      },
+      "clipping_tuning": {
+        "abstracts": 681,
+        "books": 687,
+        "news": 687,
+        "poetry": 683,
+        "recipes": 684,
+        "reddit": 687,
+        "reviews": 352,
+        "wiki": 687
+      },
+      "test": {
+        "abstracts": 681,
+        "books": 687,
+        "news": 687,
+        "poetry": 683,
+        "recipes": 684,
+        "reddit": 687,
+        "reviews": 353,
+        "wiki": 687
+      }
+    },
+    "validation_mode": "exhaustive_counts"
+  }
+}

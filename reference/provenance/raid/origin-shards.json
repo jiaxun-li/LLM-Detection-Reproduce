@@ -1,0 +1,137 @@
+{
+  "records": [
+    {
+      "file": "part-00000-of-00004.complete.json",
+      "original_file": {
+        "size": 5456,
+        "sha256": "5206701bedc112d017d170ff9a2d94d21433057cf7e4f6e6a08f733d0105c109"
+      },
+      "record": {
+        "score_rows": 41015,
+        "num_shards": 4,
+        "scorer_config": {
+          "dtype": "bf16",
+          "max_tokens": 512,
+          "observer_device": "cuda:0",
+          "observer_revision": "ec89142b67d748a1865ea4451372db8313ada0d8",
+          "performer_device": "cuda:1",
+          "performer_revision": "8782b5c5d8c9290412416618f36a133653e85285",
+          "performer_tokenizer_revision": "8782b5c5d8c9290412416618f36a133653e85285",
+          "tokenizer_revision": "ec89142b67d748a1865ea4451372db8313ada0d8",
+          "trust_remote_code": false
+        },
+        "implementation_version": "official-score-anchored-clipping-v4.1",
+        "adoption": {
+          "content": {
+            "sha256": "416547ca15171990df7d71800a9c37c7ae9eefb8758306c04b91f24d374a98f9",
+            "size": 115996106
+          },
+          "source": {
+            "mtime_ns": 1788544610000000000,
+            "size": 115996106
+          }
+        }
+      }
+    },
+    {
+      "file": "part-00001-of-00004.complete.json",
+      "original_file": {
+        "size": 5456,
+        "sha256": "17608cd8ce4051d533866230597af6f6cf2b4e6844f77de95d8c20e50c4908f8"
+      },
+      "record": {
+        "score_rows": 42861,
+        "num_shards": 4,
+        "scorer_config": {
+          "dtype": "bf16",
+          "max_tokens": 512,
+          "observer_device": "cuda:0",
+          "observer_revision": "ec89142b67d748a1865ea4451372db8313ada0d8",
+          "performer_device": "cuda:1",
+          "performer_revision": "8782b5c5d8c9290412416618f36a133653e85285",
+          "performer_tokenizer_revision": "8782b5c5d8c9290412416618f36a133653e85285",
+          "tokenizer_revision": "ec89142b67d748a1865ea4451372db8313ada0d8",
+          "trust_remote_code": false
+        },
+        "implementation_version": "official-score-anchored-clipping-v4.1",
+        "adoption": {
+          "content": {
+            "sha256": "5a91ab285c2df81ea8a6464c17822d7f348f97c17b532e26855cf1766867687d",
+            "size": 242386244
+          },
+          "source": {
+            "mtime_ns": 1788549248000000000,
+            "size": 242386244
+          }
+        }
+      }
+    },
+    {
+      "file": "part-00002-of-00004.complete.json",
+      "original_file": {
+        "size": 5456,
+        "sha256": "4e7250bd2630ef98ba5eb8723dbf7123714a8f0d3349c04deafe0595db1db636"
+      },
+      "record": {
+        "score_rows": 41899,
+        "num_shards": 4,
+        "scorer_config": {
+          "dtype": "bf16",
+          "max_tokens": 512,
+          "observer_device": "cuda:0",
+          "observer_revision": "ec89142b67d748a1865ea4451372db8313ada0d8",
+          "performer_device": "cuda:1",
+          "performer_revision": "8782b5c5d8c9290412416618f36a133653e85285",
+          "performer_tokenizer_revision": "8782b5c5d8c9290412416618f36a133653e85285",
+          "tokenizer_revision": "ec89142b67d748a1865ea4451372db8313ada0d8",
+          "trust_remote_code": false
+        },
+        "implementation_version": "official-score-anchored-clipping-v4.1",
+        "adoption": {
+          "content": {
+            "sha256": "6b4a281d10688e30941b9ac822dc3295457f4cf107365b265ce074325469cf5a",
+            "size": 239037844
+          },
+          "source": {
+            "mtime_ns": 1788554041000000000,
+            "size": 239037844
+          }
+        }
+      }
+    },
+    {
+      "file": "part-00003-of-00004.complete.json",
+      "original_file": {
+        "size": 5456,
+        "sha256": "c2e0d8a48eadc8b85b052668df60a9c51cfeae53b9d5b49704d906dd41886b51"
+      },
+      "record": {
+        "score_rows": 41548,
+        "num_shards": 4,
+        "scorer_config": {
+          "dtype": "bf16",
+          "max_tokens": 512,
+          "observer_device": "cuda:0",
+          "observer_revision": "ec89142b67d748a1865ea4451372db8313ada0d8",
+          "performer_device": "cuda:1",
+          "performer_revision": "8782b5c5d8c9290412416618f36a133653e85285",
+          "performer_tokenizer_revision": "8782b5c5d8c9290412416618f36a133653e85285",
+          "tokenizer_revision": "ec89142b67d748a1865ea4451372db8313ada0d8",
+          "trust_remote_code": false
+        },
+        "implementation_version": "official-score-anchored-clipping-v4.1",
+        "adoption": {
+          "content": {
+            "sha256": "cc95ab9c4a80a7848ee5bd90dc4bed5731af004ee473ce808967818846529a46",
+            "size": 238552700
+          },
+          "source": {
+            "mtime_ns": 1788558758000000000,
+            "size": 238552700
+          }
+        }
+      }
+    }
+  ],
+  "scope": "Only completion records present in the export. Score packs are not included."
+}

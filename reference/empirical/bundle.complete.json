@@ -1,0 +1,138 @@
+{
+  "status": "complete",
+  "study": "Controlled contamination, nine cells",
+  "artifact_hashes": {
+    "primary/primary_all_metrics.csv": {
+      "size": 2642071,
+      "sha256": "355b5a55ad93ef6cf4eee56370b240344440ec2b1c77e056d424054380619ae6"
+    },
+    "primary/primary_cell_inventory.csv": {
+      "size": 2257,
+      "sha256": "30dd35071bb11bc58ecf27b5801ef4464830df15789ea4fe0bcdfe98d3ad7b01"
+    },
+    "primary/primary_cells/squad--ibm-granite-granite-3.3-8b-base--granite8b-squad-source/analysis_configuration.json": {
+      "size": 2255,
+      "sha256": "798e3c354b6d716aee70ed6d1922b71909b4edef09a25c307bbf1afab99cd9e7"
+    },
+    "primary/primary_cells/squad--ibm-granite-granite-3.3-8b-base--granite8b-squad-source/clipping_rejections.json": {
+      "size": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    "primary/primary_cells/squad--ibm-granite-granite-3.3-8b-base--granite8b-squad-source/metrics.csv": {
+      "size": 281626,
+      "sha256": "c5165d93c23d54a78a420d4a2f64b9f6a3f3674865ad87ce29fd4db7a2205029"
+    },
+    "primary/primary_cells/squad--mistralai-Mistral-Small-24B-Base-2501--mistral24-squad-source/analysis_configuration.json": {
+      "size": 2263,
+      "sha256": "c1fdeae22bf30901375f3752fdac8786ca1777ab31a5fe03b8464c22adfa5307"
+    },
+    "primary/primary_cells/squad--mistralai-Mistral-Small-24B-Base-2501--mistral24-squad-source/clipping_rejections.json": {
+      "size": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    "primary/primary_cells/squad--mistralai-Mistral-Small-24B-Base-2501--mistral24-squad-source/metrics.csv": {
+      "size": 292211,
+      "sha256": "e64229fa06da2c86b9d525a3a12be3e1ebbe8819f6401c32636638d727a5fbc3"
+    },
+    "primary/primary_cells/squad--Qwen-Qwen2.5-32B--qwen32-squad-source/analysis_configuration.json": {
+      "size": 2216,
+      "sha256": "7747f6fca6fd66fb65f64aa6a0499380b70d4d353775b73646598c87eb5b28f2"
+    },
+    "primary/primary_cells/squad--Qwen-Qwen2.5-32B--qwen32-squad-source/clipping_rejections.json": {
+      "size": 3364,
+      "sha256": "ec4a4963a53a6c69eb3cc9572e16d5fc4b6e3b195320b353dc45063ea04a7a57"
+    },
+    "primary/primary_cells/squad--Qwen-Qwen2.5-32B--qwen32-squad-source/metrics.csv": {
+      "size": 266907,
+      "sha256": "8b3c2abed29dab15f41e57551202f27e215255f8abb96dfc4dcf8ff2c22b899a"
+    },
+    "primary/primary_cells/writingprompts--ibm-granite-granite-3.3-8b-base--granite8b-writingprompts-source/analysis_configuration.json": {
+      "size": 2362,
+      "sha256": "acc34ab54ff2ebfb14a4133abad76b9d88270798bff236e6055db2259cf5faf0"
+    },
+    "primary/primary_cells/writingprompts--ibm-granite-granite-3.3-8b-base--granite8b-writingprompts-source/clipping_rejections.json": {
+      "size": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    "primary/primary_cells/writingprompts--ibm-granite-granite-3.3-8b-base--granite8b-writingprompts-source/metrics.csv": {
+      "size": 309892,
+      "sha256": "3657b8b241f026302b50ec2958ac4f195e66bcfca18a6963b07cce209cad8509"
+    },
+    "primary/primary_cells/writingprompts--mistralai-Mistral-Small-24B-Base-2501--mistral24-writingprompts-source/analysis_configuration.json": {
+      "size": 2370,
+      "sha256": "1af9a9c1be413c4315681a19db4a82fa3affde0694c8525f995bca97cb41694c"
+    },
+    "primary/primary_cells/writingprompts--mistralai-Mistral-Small-24B-Base-2501--mistral24-writingprompts-source/clipping_rejections.json": {
+      "size": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    "primary/primary_cells/writingprompts--mistralai-Mistral-Small-24B-Base-2501--mistral24-writingprompts-source/metrics.csv": {
+      "size": 310660,
+      "sha256": "97387f9ccdb95e674539dec96960fa8d9831af661b34b6f0957166d80be32fcb"
+    },
+    "primary/primary_cells/writingprompts--Qwen-Qwen2.5-32B--qwen32-writingprompts-source/analysis_configuration.json": {
+      "size": 2393,
+      "sha256": "e9335ca95536675abdc4bc1296d3fe09366e8680641f1389fc15981f810262b4"
+    },
+    "primary/primary_cells/writingprompts--Qwen-Qwen2.5-32B--qwen32-writingprompts-source/clipping_rejections.json": {
+      "size": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    "primary/primary_cells/writingprompts--Qwen-Qwen2.5-32B--qwen32-writingprompts-source/metrics.csv": {
+      "size": 300819,
+      "sha256": "755a3525e064689394f5879a00479a08cd7042e5bd8292c78d3793ead193ac3e"
+    },
+    "primary/primary_cells/xsum--ibm-granite-granite-3.3-8b-base--granite8b-xsum-source/analysis_configuration.json": {
+      "size": 2260,
+      "sha256": "4d4d3ce499bd0d4f819846c98c78e1a05343cf4d2fc2218e3addb4990e7f2e5b"
+    },
+    "primary/primary_cells/xsum--ibm-granite-granite-3.3-8b-base--granite8b-xsum-source/clipping_rejections.json": {
+      "size": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    "primary/primary_cells/xsum--ibm-granite-granite-3.3-8b-base--granite8b-xsum-source/metrics.csv": {
+      "size": 298558,
+      "sha256": "d17ed81f64d61aacb23e4d6803a84fca1cc7fba0522bc2c86466630ac4df4e89"
+    },
+    "primary/primary_cells/xsum--mistralai-Mistral-Small-24B-Base-2501--mistral24-xsum-source/analysis_configuration.json": {
+      "size": 2268,
+      "sha256": "06b3174b51ae14a956179efb72b083133d61ceae8d7f0ff7958dee4037082a45"
+    },
+    "primary/primary_cells/xsum--mistralai-Mistral-Small-24B-Base-2501--mistral24-xsum-source/clipping_rejections.json": {
+      "size": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    "primary/primary_cells/xsum--mistralai-Mistral-Small-24B-Base-2501--mistral24-xsum-source/metrics.csv": {
+      "size": 300802,
+      "sha256": "71a8455c8530a13b6f6060420aaf74416ae7091a1512dec2f676c9e6ba662d72"
+    },
+    "primary/primary_cells/xsum--Qwen-Qwen2.5-32B--qwen32-xsum-source/analysis_configuration.json": {
+      "size": 2244,
+      "sha256": "6249371fa65263e716c6d2b500d534751f6a1d3b5a4aa53e1d301f491185d9e0"
+    },
+    "primary/primary_cells/xsum--Qwen-Qwen2.5-32B--qwen32-xsum-source/clipping_rejections.json": {
+      "size": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    "primary/primary_cells/xsum--Qwen-Qwen2.5-32B--qwen32-xsum-source/metrics.csv": {
+      "size": 289748,
+      "sha256": "b64c5bab659df91d51046d4223a0f829cba49e86a8798810d4092ab63f8a594c"
+    },
+    "primary/primary_clean_metrics.csv": {
+      "size": 78856,
+      "sha256": "098f14288612461aebe4b542e4cc153c6c94fb5bf0828aae061edc33be7074ec"
+    },
+    "primary/primary_clipping_effects.csv": {
+      "size": 524675,
+      "sha256": "4b37f19af34900620663e4b77abaf3259de2946f7045e2927133ddee598682ea"
+    },
+    "primary/primary_protocol_config.json": {
+      "size": 3253,
+      "sha256": "e2068b726db759d5fe040a3e6f2f3f84f147b41793bcf6e1befd08c29be3d339"
+    },
+    "primary/primary_robustness_auc.csv": {
+      "size": 102565,
+      "sha256": "211cdd3383f348b5bf3757e2d6c45faf4627d310aede16f504c3d132f11523c1"
+    }
+  }
+}

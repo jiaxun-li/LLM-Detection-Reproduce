@@ -1,0 +1,14 @@
+{
+  "results/assumption_audit.csv": "fae6376f4fa57f7f3f2a1a6d36f2812b196440c898fafc253c01e903775b943b",
+  "results/completion.json": "5d9c7396ae1d19757a0c43acffb03dce317093acea31667c32cfc83a8046f03a",
+  "results/config.json": "ee7acfe5716ff45d6ae3e91bc8a7ff8d391c2ceed2df38525e3d15a9e09acda5",
+  "results/coverage.json": "482ce98931c9da8a6e338d71eacf3a7bae3ac0f5750f17622e639283a327de39",
+  "results/exact_means.csv": "7908f5a12995651cb1635ed634d5125f9768d6ac69c24fc0dbb7d4ef16aee17b",
+  "results/monte_carlo.csv": "797b491fcf51f7ee6f2f92613bd098fe3e881d958c50bfad6eab4455836f9fea",
+  "results/profiles.json": "fcf7694c673782b98393f59b430b70ed1fffb1c6ee75e41a6cc3195968e4534a",
+  "analysis.py": "bded106c2b372e6072160b69068c71e19f12f25963a021e3541a1241abdedf10",
+  "models.py": "92fc84d6e32f19deedd02a4ed583a426ee76801ee2818d780647b514bb15f475",
+  "run_large.py": "80b5ba21f26d80bb24be894e86557f34cc4dc52944d3230ea6cb1cbb88c9e35a",
+  "simulate.py": "beaa963542b99e4290ac41f43b8267f86af67ca1cd646279f63feb87659f522f",
+  "summarize.py": "545b18edf6de0d2e8558623e2d8ec601f75ecb1c0f9d1b7583f3d238c5a9066b"
+}

@@ -1,0 +1,29 @@
+{
+  "paths": 2000,
+  "calibration": 4000,
+  "lengths": [
+    128,
+    512,
+    2048,
+    4096
+  ],
+  "orders": [
+    10,
+    100
+  ],
+  "supports": [
+    500,
+    1000
+  ],
+  "seed": 20260906,
+  "output": "results",
+  "vocabulary_size": 10000,
+  "initial_history": "K zero tokens",
+  "numpy_version": "2.3.5",
+  "source_sha256": {
+    "analysis.py": "bded106c2b372e6072160b69068c71e19f12f25963a021e3541a1241abdedf10",
+    "models.py": "92fc84d6e32f19deedd02a4ed583a426ee76801ee2818d780647b514bb15f475",
+    "run_large.py": "80b5ba21f26d80bb24be894e86557f34cc4dc52944d3230ea6cb1cbb88c9e35a",
+    "simulate.py": "beaa963542b99e4290ac41f43b8267f86af67ca1cd646279f63feb87659f522f"
+  }
+}

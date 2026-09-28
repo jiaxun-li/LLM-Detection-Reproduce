@@ -1,0 +1,13 @@
+{
+  "status": "complete",
+  "elapsed_seconds": 157.3360092639923,
+  "assumption_rows": 48,
+  "exact_rows": 480,
+  "monte_carlo_rows": 4800,
+  "checks": 600,
+  "certified": 40,
+  "strong": 24,
+  "vocabulary_coverage_min": 10000,
+  "vocabulary_coverage_max": 10000,
+  "parity_checks": true
+}

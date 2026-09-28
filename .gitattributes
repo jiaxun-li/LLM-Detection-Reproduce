@@ -1,0 +1,11 @@
+* text=auto
+*.py text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+
+# Reference verification depends on exact bytes on every platform.
+reference/** -text
+simulation/original/** -text
+*.png binary
+*.pdf binary
+*.npz binary
